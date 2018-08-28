@@ -5,6 +5,8 @@ http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.
 
 ## 工程明细
 
+ch是章节的简称，ch10表示第十章，ch10-1表示第十章的第一个案例工程，
+
 ```
 ├── LICENSE
 ├── README.md
