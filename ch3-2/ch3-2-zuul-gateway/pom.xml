@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.springcloud.book</groupId>
-    <artifactId>ch3-2-2-zuul-gateway</artifactId>
+    <artifactId>ch3-2-zuul-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ch3-2-2-zuul-gateway</name>
-    <description>ch3-2-2-zuul-gateway</description>
+    <name>ch3-2-zuul-gateway</name>
+    <description>ch3-2-zuul-gateway</description>
 
     <parent>
         <groupId>cn.springcloud.book</groupId>
