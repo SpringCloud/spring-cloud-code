@@ -1,11 +1,3 @@
-## 基于Spring Cloud的Finchley.RELEASE版:
-http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html
-
-由于聚合工程很多，Maven内存如果不足，请设置，欢迎**Star**。
-
-## 工程明细
-
-```
 ├── LICENSE
 ├── README.md
 ├── ch10-1
@@ -524,11 +516,5 @@ http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.
 ├── code.iml
 ├── pom.xml
 └── tree.txt
-```
->tree -L 2 >>tree.txt
 
-
-
-
-
-
+324 directories, 194 files
