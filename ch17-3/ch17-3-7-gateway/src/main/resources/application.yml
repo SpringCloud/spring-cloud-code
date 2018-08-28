@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: prefix_route
+        uri: http://localhost:8701/test/Hystrix?isSleep=true
+        predicates:
+        - Path=/test/Hystrix
+        filters:
+        - name: Hystrix # Hystrix Filter的名称
+          args: # Hystrix配置参数
+            name: fallbackcmd #HystrixCommand的名字
+            fallbackUri: forward:/fallback #fallback对应的uri
+
+#Hystrix的fallbackcmd的时间
+hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG

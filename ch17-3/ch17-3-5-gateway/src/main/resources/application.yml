@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: baidu_route
+        uri: http://www.baidu.com
+        predicates:
+        - Path=/baidu/test/**
+        filters:
+        - StripPrefix=2
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG

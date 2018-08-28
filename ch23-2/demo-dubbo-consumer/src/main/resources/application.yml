@@ -1,0 +1,20 @@
+#spring:
+#  dubbo:
+#    application:
+#      name: demo-consumer
+#    registry:
+#      address: zookeeper://127.0.0.1:2181
+#    protocol:
+#      name: dubbo
+#    scan:
+#      basePackages: cn.springcloud.book.service
+
+dubbo:
+  application:
+    name: demo-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+  scan:
+    basePackages: cn.springcloud.book.service

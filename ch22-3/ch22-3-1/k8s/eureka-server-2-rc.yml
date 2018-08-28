@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: eureka-server-2
+  namespace: springcloud-cn
+  labels:
+    app: eureka-server
+    peer: "2"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eureka-server
+        peer: "2"
+    spec:
+      containers:
+      - name: eureka-server
+        image: registry.cn-hangzhou.aliyuncs.com/springcloud-cn/ch22-2-2-eureka-server:0.0.1-SNAPSHOT
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 2Gi
+        env:
+          - name: PROFILE
+            value: "default"
+          - name: SERVER_PORT
+            value: "8080"
+          - name: CONFIG_SERVER_HOST
+            value: "192.168.99.101"
+          - name: CONFIG_SERVER_PORT
+            value: "8888"
+          - name: EUREKA_SERVER_HOST
+            value: "192.168.99.101"
+          - name: EUREKA_SERVER_PORT
+            value: "8761"
+          - name: JAVA_OPTS
+            value: "
+-server \
+-XX:+PrintGCDetails \
+-XX:+PrintTenuringDistribution \
+-XX:+PrintGCTimeStamps \
+-XX:+HeapDumpOnOutOfMemoryError \
+-XX:HeapDumpPath=/ \
+-Xloggc:/gc.log \
+-XX:+UseGCLogFileRotation \
+-XX:NumberOfGCLogFiles=5 \
+-XX:GCLogFileSize=10M"
+        ports:
+          - name: http
+            containerPort: 8080

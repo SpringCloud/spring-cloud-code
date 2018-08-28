@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ch12-4-config-client-mongodb
+
+server:
+  port: 9097

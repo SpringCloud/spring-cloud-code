@@ -1,0 +1,9 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: consul-override-consumer-new
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口

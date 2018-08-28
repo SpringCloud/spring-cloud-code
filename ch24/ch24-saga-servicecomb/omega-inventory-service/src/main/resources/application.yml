@@ -1,0 +1,29 @@
+server:
+  port: 8081
+alpha:
+  cluster:
+    address: localhost:9090
+spring:
+  application:
+    name: omega-inventory-service
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:inventory
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    continue-on-error: false
+    initialization-mode: always
+    type: org.apache.tomcat.jdbc.pool.DataSource
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

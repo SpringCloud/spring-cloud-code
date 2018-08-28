@@ -1,0 +1,10 @@
+
+########################## 服务忽略、路径忽略、前缀、重定向问题 ##########################
+
+zuul:
+#  ignored-services: client-b    #忽略的服务，防服务侵入
+#  ignored-patterns: /**/div/**  #忽略的接口，屏蔽接口
+#  prefix: /pre                  #前缀
+#  add-host-header: true         #重定向header问题
+  routes:
+    client-a: /client/**

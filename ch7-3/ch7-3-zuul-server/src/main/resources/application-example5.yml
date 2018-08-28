@@ -1,0 +1,11 @@
+
+########################## 敏感头设置 ##########################
+
+zuul:
+  prefix: /pre
+  routes:
+    client-a:
+      path: /client/**
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+      serviceId: client-a
+      stripPrefix: false

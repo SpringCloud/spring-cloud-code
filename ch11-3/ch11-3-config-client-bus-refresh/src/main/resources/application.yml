@@ -1,0 +1,17 @@
+server:
+  port: 9095
+
+spring:
+  application:
+    name: ch11-3-config-client-bus-refresh
+
+  ## 配置rabbitMQ 信息
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+  cloud:
+      bus:
+        trace:
+            enabled: true

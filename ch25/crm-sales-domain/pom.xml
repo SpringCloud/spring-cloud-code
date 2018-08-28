@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.springcloud.book</groupId>
+		<artifactId>ch25</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>crm-sales-domain</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>crm-sales-domain</name>
+	<dependencies>
+		<dependency>
+			<groupId>cn.springcloud.book</groupId>
+			<artifactId>crm-sales-infrastructure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.springcloud.book</groupId>
+			<artifactId>crm-sales-client</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+			<pluginManagement>
+					<plugins>
+							<plugin>
+								<artifactId>maven-deploy-plugin</artifactId>
+								<configuration>
+									<skip>true</skip>
+								</configuration>
+							</plugin>
+					</plugins>
+			</pluginManagement>
+	</build>
+</project>

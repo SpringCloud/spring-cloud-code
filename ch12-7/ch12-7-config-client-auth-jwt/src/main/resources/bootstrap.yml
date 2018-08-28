@@ -1,0 +1,11 @@
+spring:
+    cloud:
+        config:
+            label: master
+            uri: http://localhost:9090
+            name: config-info
+            profile: dev
+            username: root
+            password: 123
+            enabled: false
+            endpoint: http://localhost:9090/auth

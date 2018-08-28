@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: example-service-hpa
+  namespace: springcloud-cn
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: ReplicationController
+    name: example-service
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 10

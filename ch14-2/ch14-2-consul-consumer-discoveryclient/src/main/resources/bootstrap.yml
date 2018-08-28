@@ -1,0 +1,9 @@
+server:
+  port: 8084             # 因为本地启动，防止端口冲突
+spring:
+  application:
+    name: consul-consumer-discoveryclient
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口

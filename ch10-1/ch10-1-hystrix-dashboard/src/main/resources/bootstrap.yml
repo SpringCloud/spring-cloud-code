@@ -1,0 +1,11 @@
+server:
+  port: 9099
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:9090
+      name: config-info
+      profile: dev
+  application:
+    name: sc-hystrix-dashboard

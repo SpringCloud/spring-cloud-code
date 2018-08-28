@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: atomikos-demo
+  h2:
+    console:
+      enabled: true
+  jta:
+    enabled: true
+    atomikos:
+      datasource:
+        order:
+          xa-properties.url: jdbc:h2:mem:dborder
+          xa-properties.user: sa
+          xa-properties.password:
+          xa-data-source-class-name: org.h2.jdbcx.JdbcDataSource
+          unique-resource-name: order
+          max-pool-size: 10
+          min-pool-size: 1
+          max-lifetime: 10000
+          borrow-connection-timeout: 10000
+        log:
+          xa-properties.url: jdbc:h2:mem:dblog
+          xa-properties.user: sa
+          xa-properties.password:
+          xa-data-source-class-name: org.h2.jdbcx.JdbcDataSource
+          unique-resource-name: log
+          max-pool-size: 10
+          min-pool-size: 1
+          max-lifetime: 10000
+          borrow-connection-timeout: 10000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

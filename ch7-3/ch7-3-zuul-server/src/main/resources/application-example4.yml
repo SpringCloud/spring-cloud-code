@@ -1,0 +1,11 @@
+
+########################## 映射覆盖情况 ##########################
+
+zuul:
+  routes:
+    client-b:
+      path: /client/**
+      serviceId: client-b
+    client-a:
+      path: /client/**
+      serviceId: client-a

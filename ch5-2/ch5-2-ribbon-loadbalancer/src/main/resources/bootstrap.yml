@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ribbon-loadbalancer
+server:
+  port: 7777
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+#client-a:
+#  ribbon:
+#    ConnectTimeout: 3000
+#    ReadTimeout: 60000
+#    MaxAutoRetries: 1 #对第一次请求的服务的重试次数
+#    MaxAutoRetriesNextServer: 1 #要重试的下一个服务的最大数量（不包括第一个服务）
+#    OkToRetryOnAllOperations: true
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule#
+#ribbon:
+#  eager-load:
+#    enabled: true
+#    clients: client-a, client-b, client-c

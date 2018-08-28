@@ -1,0 +1,16 @@
+server:
+  port: 9020
+
+spring:
+  application:
+    name: ch12-10-config-client-apollo2
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application

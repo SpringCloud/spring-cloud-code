@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ch12-3-config-client-db
+
+server:
+  port: 9096
+
+logging:
+      level:
+          root: INFO

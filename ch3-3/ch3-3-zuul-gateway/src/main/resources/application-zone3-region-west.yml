@@ -1,0 +1,14 @@
+server:
+  port: 10002
+eureka:
+  instance:
+    metadataMap.zone: zone3
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    region: region-west
+    service-url:
+      zone3: http://localhost:8763/eureka/
+      zone4: http://localhost:8764/eureka/
+    availability-zones:
+      region-west: zone3,zone4

@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhongzunfa/spring-cloud-config
+          search-paths: SC-BOOK-CONFIG
+          repos:
+            simple: https://gitee.com/zhongzunfa/simple
+            special:
+                pattern: special*/dev*,*special*/dev*
+                uri: https://gitee.com/zhongzunfa/spring-cloud-config-special
+            local:
+              pattern: local*
+              uri: /Users/zhongzunfa/all_test/spring-cloud-config
+
+  application:
+    name: ch12-2-config-server-multiple-repositories
+server:
+    port: 9090
+logging:
+  level:
+    root: debug

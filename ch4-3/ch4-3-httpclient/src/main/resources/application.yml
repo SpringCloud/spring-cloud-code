@@ -1,0 +1,9 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: ch4-3-httpclient
+
+feign:
+  httpclient:
+      enabled: true

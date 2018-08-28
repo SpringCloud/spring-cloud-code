@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+
+#开启actuator管理api，后面要关闭
+management:
+  endpoints:
+    web:  # http://localhost:8080/actuator/gateway/routes
+      exposure:
+        include: "*"

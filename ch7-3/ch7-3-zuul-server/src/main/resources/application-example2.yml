@@ -1,0 +1,12 @@
+
+########################## 默认配置 ##########################
+
+#zuul:
+#  routes:
+#    client-a:
+#      path: /client-a/**
+#      serviceId: client-a
+
+zuul:
+  routes:
+    client-a: 

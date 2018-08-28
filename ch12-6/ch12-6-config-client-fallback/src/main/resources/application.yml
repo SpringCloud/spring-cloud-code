@@ -1,0 +1,6 @@
+server:
+  port: 9013
+
+spring:
+  application:
+    name: ch12-6-config-client-fallback

@@ -1,0 +1,132 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.springcloud.book</groupId>
+    <artifactId>code</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>chapter</name>
+    <url>http://springcloud.cn</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>ch2-1</module>
+        <module>ch3-1</module>
+        <module>ch3-2</module>
+        <module>ch3-3</module>
+        <module>ch3-4</module>
+        <module>ch3-5</module>
+        <module>ch4-1</module>
+        <module>ch4-2</module>
+        <module>ch4-3</module>
+        <module>ch4-4</module>
+        <module>ch4-5</module>
+        <module>ch4-6</module>
+
+        <module>ch5-1</module>
+        <module>ch5-2</module>
+
+        <module>ch6-1</module>
+        <module>ch6-2</module>
+        <module>ch6-3</module>
+        <module>ch6-4</module>
+
+        <module>ch7-1</module>
+        <module>ch7-2</module>
+        <module>ch7-3</module>
+
+        <module>ch8-1</module>
+        <module>ch8-2</module>
+        <module>ch8-3</module>
+        <module>ch8-4</module>
+        <module>ch8-5</module>
+        <module>ch8-6</module>
+        <module>ch8-7</module>
+
+        <module>ch10-1</module>
+
+        <module>ch11-1</module>
+        <module>ch11-2</module>
+        <module>ch11-3</module>
+
+        <module>ch12-1</module>
+        <module>ch12-2</module>
+        <module>ch12-3</module>
+        <module>ch12-4</module>
+        <module>ch12-5</module>
+        <module>ch12-6</module>
+        <module>ch12-7</module>
+        <module>ch12-8</module>
+        <module>ch12-9</module>
+        <module>ch12-10</module>
+
+        <module>ch13-1</module>
+
+        <module>ch14-1</module>
+        <module>ch14-2</module>
+        <module>ch14-3</module>
+        <module>ch14-4</module>
+        <module>ch14-5</module>
+
+        <module>ch15-1</module>
+
+        <module>ch16-1</module>
+        <module>ch16-2</module>
+        <module>ch16-3</module>
+
+        <module>ch17-1</module>
+        <module>ch17-2</module>
+        <module>ch17-3</module>
+
+        <module>ch18-1</module>
+        <module>ch18-2</module>
+        <module>ch18-3</module>
+        <module>ch18-4</module>
+        <module>ch18-5</module>
+        <module>ch18-6</module>
+        <module>ch18-7</module>
+
+        <module>ch19-1</module>
+        <module>ch19-2</module>
+        <module>ch20</module>
+
+        <module>ch21-1</module>
+
+        <module>ch22-1</module>
+        <module>ch22-2</module>
+        <module>ch22-3</module>
+
+        <module>ch23-1</module>
+        <module>ch23-2</module>
+
+        <module>ch24</module>
+        <module>ch25</module>
+    </modules>
+
+    <developers>
+        <developer>
+            <name>xujin</name>
+            <email>Software_King@qq.com</email>
+        </developer>
+    </developers>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

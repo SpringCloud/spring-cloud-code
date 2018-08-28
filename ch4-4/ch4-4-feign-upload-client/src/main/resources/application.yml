@@ -1,0 +1,10 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: feign-upload-client
+
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka

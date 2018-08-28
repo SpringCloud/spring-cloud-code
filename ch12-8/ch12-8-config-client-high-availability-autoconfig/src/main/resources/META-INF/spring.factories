@@ -1,0 +1,2 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+cn.springcloud.book.config.configuration.ConfigSupportConfiguration

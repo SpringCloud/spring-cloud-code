@@ -1,0 +1,3 @@
+eureka:
+  server:
+    peer-eureka-nodes-update-interval-ms: 10000 #默认是10分钟即600000，这里为了验证改为10秒

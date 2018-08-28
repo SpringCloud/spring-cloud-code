@@ -1,0 +1,11 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: saga-servicecomb-example
+alpha:
+  cluster:
+    address: localhost:9090
+omega:
+  orderService: http://localhost:8080/order
+  inventoryService: http://localhost:8081/inventory

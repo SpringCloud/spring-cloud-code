@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: remoteaddr_route
+        uri: http://baidu.com
+        predicates:
+        - RemoteAddr=127.0.0.1

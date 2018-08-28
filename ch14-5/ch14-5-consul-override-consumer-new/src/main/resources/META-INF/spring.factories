@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.springcloud.book.consul.override.consumer.myconsultool.MyRibbonConsulAutoConfiguration

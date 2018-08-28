@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: between_route
+        uri: http://xujin.org
+        predicates:
+        - name: Between
+          args:
+            datetime1: 2018-03-15T00:02:48.513+08:00[Asia/Shanghai]
+            datetime2: 2018-03-15T02:02:48.516+08:00[Asia/Shanghai]

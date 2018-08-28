@@ -1,0 +1,5 @@
+server:
+  port: 9088
+spring:
+  application:
+    name: sc-turbine-dashboard

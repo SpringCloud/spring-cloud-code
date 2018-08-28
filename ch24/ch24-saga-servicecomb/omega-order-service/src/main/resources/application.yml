@@ -1,0 +1,26 @@
+alpha:
+  cluster:
+    address: localhost:9090
+spring:
+  application:
+    name: omega-order-service
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:order
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    continue-on-error: false
+    initialization-mode: always
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

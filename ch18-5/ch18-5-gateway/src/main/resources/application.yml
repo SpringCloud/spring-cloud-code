@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: sc-gateway
+  cloud:
+      gateway:
+        locator:
+          enabled: true
+        routes:
+        - id: sc-service
+          uri: lb://sc-service
+          predicates:
+          - Path=/admin/**
+          filters:
+          - GwSwaggerHeaderFilter
+          - StripPrefix=1
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

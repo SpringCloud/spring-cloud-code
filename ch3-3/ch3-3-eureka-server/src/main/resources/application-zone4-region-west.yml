@@ -1,0 +1,23 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: eureka-server
+eureka:
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: false
+    remoteRegionUrlsWithName:
+      region-east: http://localhost:8761/eureka/
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    region: region-west
+    service-url:
+      zone3: http://localhost:8763/eureka/
+      zone4: http://localhost:8764/eureka/
+    availability-zones:
+      region-west: zone3,zone4
+  instance:
+    hostname: localhost
+    metadataMap.zone: zone4

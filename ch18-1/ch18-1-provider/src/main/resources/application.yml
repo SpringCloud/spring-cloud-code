@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: sc-producer
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

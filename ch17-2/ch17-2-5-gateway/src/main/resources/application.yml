@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-gateway
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: header_route
+        uri: http://localhost:8071/test/head
+        predicates:
+        - Header=X-Request-Id, xujin

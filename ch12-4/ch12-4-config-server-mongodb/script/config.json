@@ -1,0 +1,13 @@
+{
+  "label" : "master",
+  "profile" : "prod",
+  "source" : {
+    "cn" : {
+      "springcloud" : {
+        "book" : {
+          "config" : "I am the mongdb configuration file from dev environment. I will edit."
+        }
+      }
+    }
+  }
+}

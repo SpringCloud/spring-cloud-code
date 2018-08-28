@@ -1,0 +1,5 @@
+server:
+  port: 8081        # 这里使用 8081 端口, Consul 中配置8082端口, 验证生效配置
+spring:
+  profiles:
+    active: test    # 指定启动时的 profiles

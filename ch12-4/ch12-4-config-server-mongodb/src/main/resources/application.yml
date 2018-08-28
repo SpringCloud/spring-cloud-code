@@ -1,0 +1,9 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: ch12-4-config-server-mongodb
+  data:
+      mongodb:
+        uri: mongodb://localhost/springcloud

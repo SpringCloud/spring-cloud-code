@@ -1,0 +1,6 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: ch12-1-config-client-placeholders

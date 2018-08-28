@@ -1,0 +1,3 @@
+eureka:
+  client:
+    eureka-service-url-poll-interval-seconds: 10 #默认为300秒，这里为了验证改为10秒

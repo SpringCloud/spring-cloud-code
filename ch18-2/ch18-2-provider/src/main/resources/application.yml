@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sc-producer
+server:
+  port: 8001

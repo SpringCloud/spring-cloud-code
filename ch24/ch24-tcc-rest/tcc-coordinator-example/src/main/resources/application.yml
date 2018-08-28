@@ -1,0 +1,8 @@
+tcc:
+  coordinator:
+    url: http://localhost:9090/coordinator
+  transaction:
+    timeoutInMs: 30000
+  participant:
+    orderService: http://localhost:8080/order/tcc/%s
+    inventoryService: http://localhost:8081/inventory/tcc/%s

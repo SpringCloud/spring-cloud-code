@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zuul-gateway
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

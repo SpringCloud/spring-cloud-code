@@ -1,0 +1,10 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: ch4-1-hello
+
+logging:
+     level:
+       cn.springcloud.book.feign.service.HelloFeignService: debug
+

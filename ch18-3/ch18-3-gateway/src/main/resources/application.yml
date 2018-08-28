@@ -1,0 +1,24 @@
+server.port: 8080
+spring:
+  application:
+    name: ch18-3-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: service1_v1
+        uri: http://localhost:8081/v1
+        predicates:
+        - Path=/test
+        - Weight=service1, 95
+      - id: service1_v2
+        uri: http://localhost:8081/v2
+        predicates:
+        - Path=/test
+        - Weight=service1, 5
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG

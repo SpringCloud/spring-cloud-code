@@ -1,0 +1,20 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: ch2-1-consumer
+
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka
+
+# 配置请求GZIP压缩
+feign:
+   compression:
+          request:
+              enabled: true
+              mime-types: text/xml,application/xml,application/json # 配置压缩支持的MIME TYPE
+              min-request-size: 2048 # 配置压缩数据大小的下限
+          response:
+              enabled: true # 配置响应GZIP压缩

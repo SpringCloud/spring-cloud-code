@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhongzunfa/spring-cloud-config.git
+          search-paths: SC-BOOK-CONFIG
+          force-pull: true
+  application:
+    name: ch12-7-config-server-auth-jwt
+
+  security:
+    user:
+      name: root
+      password: 123
+
+server:
+    port: 9090

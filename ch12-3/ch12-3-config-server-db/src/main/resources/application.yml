@@ -1,0 +1,26 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: ch12-3-config-server-db
+  cloud:
+    config:
+      server:
+        jdbc:
+          sql: SELECT `KEY`, `VALUE` FROM PROPERTIES WHERE application =? AND profile =? AND lable =?
+      label: master
+    refresh:
+        refreshable: none
+  profiles:
+    active: jdbc
+
+  ## 数据配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/spring-cloud?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+logging:
+  level:
+    org.springframework.jdbc.core: DEBUG
+    org.springframework.jdbc.core.StatementCreatorUtils: Trace

@@ -1,0 +1,11 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: consul-override-consumer-new
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口
+      ribbon:
+        enabled: false   # 此处配置很重要,为 true 时走原有逻辑, 为 false 时走重写逻辑

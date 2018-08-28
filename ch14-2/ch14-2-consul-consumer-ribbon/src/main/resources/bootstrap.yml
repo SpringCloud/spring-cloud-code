@@ -1,0 +1,12 @@
+server:
+  port: 8083             # 因为本地启动，防止端口冲突
+spring:
+  application:
+    name: consul-consumer-ribbon
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口
+      discovery:
+        server-list-query-tags:     # 注意 server-list-query-tags 是一个 map
+          consul-provider: tag1     # 在调用consul-provider 服务时, 使用 tag1 对应的实例

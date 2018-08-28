@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: jdbc
+  h2:
+    console:
+      enabled: true
+  cloud:
+    config:
+      label: master
+      server:
+        bootstrap: true
+        jdbc: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    continue-on-error: false
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+    initialization-mode: always
+    type: org.apache.tomcat.jdbc.pool.DataSource
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

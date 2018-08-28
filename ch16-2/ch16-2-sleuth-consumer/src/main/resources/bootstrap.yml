@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: sleuth-consumer
+  sleuth:
+    baggage-keys:  # 注意, Sleuth2.0.0之后, baggage的 key 必须在这里配置才能生效
+      - SessionId

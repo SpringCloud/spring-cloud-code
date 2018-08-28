@@ -1,0 +1,55 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: example-service
+  namespace: springcloud-cn
+  labels:
+    app: example-service
+spec:
+  replicas: 3
+#  minReadySeconds: 60     #滚动升级时60s后认为该pod就绪
+  strategy:
+    rollingUpdate:  ##由于replicas为3,则整个升级,pod个数在2-4个之间
+      maxSurge: 1      #滚动升级时会先启动1个pod
+      maxUnavailable: 1 #滚动升级时允许的最大Unavailable的pod个数
+  template:
+    metadata:
+      labels:
+        app: example-service
+    spec:
+      terminationGracePeriodSeconds: 60 ##k8s将会给应用发送SIGTERM信号，可以用来正确、优雅地关闭应用,默认为30秒
+      containers:
+      - name: example-service
+        image: registry.cn-hangzhou.aliyuncs.com/springcloud-cn/ch22-3-2-example-service:0.0.1-SNAPSHOT
+        imagePullPolicy: Always
+        livenessProbe: #kubernetes认为该pod是存活的,不存活则需要重启
+          httpGet:
+            path: /acutator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 60 ## equals to the maximum startup time of the application + couple of seconds
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 5
+        readinessProbe: #kubernetes认为该pod是启动成功的
+          httpGet:
+            path: /actuator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 30 ## equals to minimum startup time of the application
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 5
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        env:
+          - name: PROFILE
+            value: "default"
+        ports:
+          - name: http
+            containerPort: 8080

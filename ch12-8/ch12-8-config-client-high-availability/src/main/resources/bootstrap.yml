@@ -1,0 +1,10 @@
+spring:
+    cloud:
+        config:
+            label: master
+            uri: http://localhost:9090
+            name: config-info
+            profile: dev
+            backup:
+                enable: true
+                fallbackLocation: D:\\application_dev\\idea_workspace\\sc-book-local-config-test\\fallback.properties

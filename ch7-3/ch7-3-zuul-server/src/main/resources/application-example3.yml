@@ -1,0 +1,12 @@
+
+########################## 简化配置 ##########################
+
+#zuul:
+#  routes:
+#    client-a:
+#      path: /client/**
+#      serviceId: client-a
+
+zuul:
+  routes:
+    client-a: /client/**

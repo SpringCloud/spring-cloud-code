@@ -1,0 +1,19 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: ch4-1-gzip
+
+logging:
+     level:
+       cn.springcloud.book.feign.service.HelloFeignService: debug
+
+
+feign:
+    compression:
+        request:
+            enabled: true
+            mime-types: text/xml,application/xml,application/json # 配置压缩支持的MIME TYPE
+            min-request-size: 2048  # 配置压缩数据大小的下限
+        response:
+            enabled: true # 配置响应GZIP压缩

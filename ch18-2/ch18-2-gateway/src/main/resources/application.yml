@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sc-gateway-server
+
+server:
+  port: 9000
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

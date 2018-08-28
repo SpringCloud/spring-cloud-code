@@ -1,0 +1,14 @@
+spring:
+    cloud:
+        config:
+            label: master
+            name: config-info
+            profile: dev
+            discovery:
+                    enabled: true
+                    service-id: ch12-9-config-server-high-availability
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

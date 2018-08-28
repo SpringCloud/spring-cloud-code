@@ -1,0 +1,9 @@
+server:
+  port: 9012
+
+spring:
+  application:
+    name: ch12-5-config-client-auto-refresh
+  cloud:
+      config:
+          refreshInterval: 60

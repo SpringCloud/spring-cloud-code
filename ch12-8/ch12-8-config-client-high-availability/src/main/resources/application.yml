@@ -1,0 +1,6 @@
+server:
+  port: 9015
+
+spring:
+  application:
+    name: ch12-8-config-client-high-availability

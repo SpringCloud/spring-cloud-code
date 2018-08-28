@@ -1,0 +1,13 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: ch4-3-okhttp
+
+
+feign:
+    httpclient:
+         enabled: false
+    okhttp:
+         enabled: true
+

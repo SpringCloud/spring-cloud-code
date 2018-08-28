@@ -1,0 +1,6 @@
+server:
+  port: 9016
+
+spring:
+  application:
+    name: ch12-9-config-client

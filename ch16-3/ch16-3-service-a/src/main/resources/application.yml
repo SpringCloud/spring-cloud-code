@@ -1,0 +1,11 @@
+server:
+  port: 9021
+
+spring:
+  application:
+    name: ch16-3-service-a
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

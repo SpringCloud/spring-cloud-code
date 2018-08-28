@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.springcloud</groupId>
+	<artifactId>ch19-1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ch19-1</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<grpc.version>1.5.0</grpc.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-all</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
+
+
+	</dependencies>
+
+	<build>
+
+		<!--<extensions>-->
+			<!--<extension>-->
+				<!--<groupId>kr.motd.maven</groupId>-->
+				<!--<artifactId>os-maven-plugin</artifactId>-->
+				<!--<version>1.5.0.Final</version>-->
+			<!--</extension>-->
+		<!--</extensions>-->
+
+		<!--<plugins>-->
+			<!--<plugin>-->
+			<!--<groupId>org.xolstice.maven.plugins</groupId>-->
+			<!--<artifactId>protobuf-maven-plugin</artifactId>-->
+			<!--<version>0.5.1</version>-->
+			<!--<extensions>true</extensions>-->
+
+				<!--<executions>-->
+				<!--<execution>-->
+					<!--<goals>-->
+						<!--<goal>compile</goal>-->
+						<!--<goal>test-compile</goal>-->
+					<!--</goals>-->
+					<!--<configuration>-->
+						<!--<protocArtifact>com.google.protobuf:protoc:3.4.0:exe:${os.detected.classifier}</protocArtifact>-->
+					<!--</configuration>-->
+				<!--</execution>-->
+			<!--</executions>-->
+		<!--</plugin>-->
+
+		<!--</plugins>-->
+
+		<!--<extensions>-->
+			<!--<extension>-->
+				<!--<groupId>kr.motd.maven</groupId>-->
+				<!--<artifactId>os-maven-plugin</artifactId>-->
+				<!--<version>1.4.1.Final</version>-->
+			<!--</extension>-->
+		<!--</extensions>-->
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.xolstice.maven.plugins</groupId>-->
+				<!--<artifactId>protobuf-maven-plugin</artifactId>-->
+				<!--<version>0.5.0</version>-->
+				<!--<configuration>-->
+					<!--<protocArtifact>-->
+						<!--com.google.protobuf:protoc:3.1.0:exe:${os.detected.classifier}-->
+					<!--</protocArtifact>-->
+					<!--<pluginId>grpc-java</pluginId>-->
+					<!--<pluginArtifact>-->
+						<!--io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}-->
+					<!--</pluginArtifact>-->
+				<!--</configuration>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<goals>-->
+							<!--<goal>compile</goal>-->
+							<!--<goal>compile-custom</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+
+
+
+		<extensions>
+			<extension>
+				<groupId>kr.motd.maven</groupId>
+				<artifactId>os-maven-plugin</artifactId>
+				<version>1.5.0.Final</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<groupId>org.xolstice.maven.plugins</groupId>
+				<artifactId>protobuf-maven-plugin</artifactId>
+				<version>0.5.1</version>
+				<configuration>
+					<protoSourceRoot>${project.basedir}/src/main/proto</protoSourceRoot>
+					<!--默认值-->
+					<!--<outputDirectory>${project.build.directory}/generated-sources/protobuf/java</outputDirectory>-->
+					<outputDirectory>${project.build.directory}/generated-sources/protobuf/java</outputDirectory>
+					<!--设置是否在生成java文件之前清空outputDirectory的文件，默认值为true，设置为false时也会覆盖同名文件-->
+					<clearOutputDirectory>true</clearOutputDirectory>
+					<protocArtifact>
+						com.google.protobuf:protoc:3.5.1:exe:${os.detected.classifier}
+					</protocArtifact>
+					<pluginId>grpc-java</pluginId>
+					<pluginArtifact>
+						io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+					</pluginArtifact>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>compile-custom</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

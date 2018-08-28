@@ -1,0 +1,6 @@
+server:
+  port: 5566
+spring:
+  application:
+    name: sc-hello-service
+

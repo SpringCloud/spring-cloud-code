@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consul-register
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口
+      discovery:
+        prefer-ip-address: true     # 优先使用 IP 注册
+        ip-address: 127.0.0.1       # 假装部署在 docker 中,指定了宿主机 IP
+        port: 8080                  # 假装部署在 docker 中,指定了宿主机端口
+        health-check-interval: 20s  # 健康检查间隔时间为 20s
+        health-check-path: /health  # 自定义健康检查路径
+        tags: ${LANG},test          # 指定服务的标签, 用逗号隔开

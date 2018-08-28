@@ -1,0 +1,6 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: sc-hystrix-thread-service
+

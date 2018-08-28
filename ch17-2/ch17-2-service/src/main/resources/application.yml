@@ -1,0 +1,6 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: service-provider
+

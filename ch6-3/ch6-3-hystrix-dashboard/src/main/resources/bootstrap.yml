@@ -1,0 +1,5 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: sc-hystrix-dashboard

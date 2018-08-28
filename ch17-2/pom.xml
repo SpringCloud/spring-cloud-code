@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>code</artifactId>
+        <groupId>cn.springcloud.book</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ch17-2</artifactId>
+    <packaging>pom</packaging>
+    <name>ch17-2</name>
+
+    <modules>
+        <module>ch17-2-service</module>
+        <module>ch17-2-1-gateway</module>
+        <module>ch17-2-2-gateway</module>
+        <module>ch17-2-3-gateway</module>
+        <module>ch17-2-4-gateway</module>
+        <module>ch17-2-5-gateway</module>
+        <module>ch17-2-6-gateway</module>
+        <module>ch17-2-7-gateway</module>
+        <module>ch17-2-8-gateway</module>
+        <module>ch17-2-9-gateway</module>
+    </modules>
+</project>

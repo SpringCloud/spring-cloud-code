@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.springcloud.book.crm.sales.dao.CustomerDOMapper" >
+  <resultMap id="BaseResultMap" type="cn.springcloud.book.crm.sales.tunnel.dataobject.CustomerDO" >
+    <id column="customer_id" property="customerId" jdbcType="VARCHAR" />
+    <result column="member_id" property="memberId" jdbcType="VARCHAR" />
+    <result column="global_id" property="globalId" jdbcType="VARCHAR" />
+    <result column="company_name" property="companyName" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="company_type" property="companyType" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    customer_id, member_id, global_id, company_name, source, company_type
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from customer
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from customer
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.springcloud.book.crm.sales.tunnel.dataobject.CustomerDO" >
+    insert into customer (customer_id, member_id, global_id, 
+      company_name, source, company_type
+      )
+    values (#{customerId,jdbcType=VARCHAR}, #{memberId,jdbcType=VARCHAR}, #{globalId,jdbcType=VARCHAR}, 
+      #{companyName,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{companyType,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.springcloud.book.crm.sales.tunnel.dataobject.CustomerDO" >
+    insert into customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="customerId != null" >
+        customer_id,
+      </if>
+      <if test="memberId != null" >
+        member_id,
+      </if>
+      <if test="globalId != null" >
+        global_id,
+      </if>
+      <if test="companyName != null" >
+        company_name,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="companyType != null" >
+        company_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="customerId != null" >
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="memberId != null" >
+        #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="globalId != null" >
+        #{globalId,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="companyType != null" >
+        #{companyType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.springcloud.book.crm.sales.tunnel.dataobject.CustomerDO" >
+    update customer
+    <set >
+      <if test="memberId != null" >
+        member_id = #{memberId,jdbcType=VARCHAR},
+      </if>
+      <if test="globalId != null" >
+        global_id = #{globalId,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null" >
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="companyType != null" >
+        company_type = #{companyType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.springcloud.book.crm.sales.tunnel.dataobject.CustomerDO" >
+    update customer
+    set member_id = #{memberId,jdbcType=VARCHAR},
+      global_id = #{globalId,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      source = #{source,jdbcType=VARCHAR},
+      company_type = #{companyType,jdbcType=VARCHAR}
+    where customer_id = #{customerId,jdbcType=VARCHAR}
+  </update>
+
+  <select id="selectByParams" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from customer
+    where 1=1
+    limit #{offset},#{limit}
+  </select>
+
+  <select id="countByParams" parameterType="java.util.Map" resultType="int">
+    select count(1)
+    from customer
+    where 1=1
+  </select>
+</mapper>

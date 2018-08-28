@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consul-provider1
+  cloud:
+    consul:
+      host: 127.0.0.1    # consul 启动地址
+      port: 8500         # consul 启动端口

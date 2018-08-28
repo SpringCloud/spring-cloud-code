@@ -1,0 +1,6 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: sc-hystrix-exception-service
+

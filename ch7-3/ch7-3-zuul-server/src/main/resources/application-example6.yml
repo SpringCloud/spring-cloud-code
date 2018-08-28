@@ -1,0 +1,9 @@
+
+########################## 重试机制 ##########################
+
+zuul: 
+  retryable: true #开启重试
+
+ribbon:
+  MaxAutoRetries: 1 #同一个服务重试的次数(除去首次)
+  MaxAutoRetriesNextServer: 1  #切换相同服务数量

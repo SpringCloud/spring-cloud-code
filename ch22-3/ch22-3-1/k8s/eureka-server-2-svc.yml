@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: eureka-server-2
+  namespace: springcloud-cn
+  labels:
+    service: eureka-server-svc
+spec:
+  selector:
+    app: eureka-server
+    peer: "2"
+  ports:
+  - name: http
+    port: 8762
+    targetPort: 8080
+  clusterIP: 10.96.0.4
+  externalIPs:
+    - 192.168.99.101

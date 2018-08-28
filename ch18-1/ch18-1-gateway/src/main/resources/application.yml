@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: sc-gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+server:
+  port: 9000  #网关服务监听 9000 端口
+eureka:
+  client:
+    service-url: #指定注册中心的地址，以便使用服务发现功能
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level: #调整相关包的 log 级别，以便排查问题
+    org.springframework.cloud.gateway: debug

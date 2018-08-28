@@ -1,0 +1,6 @@
+server:
+  port: 9101
+
+spring:
+  application:
+    name: ch12-2-config-client-multiple-repositories

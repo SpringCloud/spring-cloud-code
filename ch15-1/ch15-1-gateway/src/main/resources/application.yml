@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

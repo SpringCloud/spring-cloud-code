@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: turbine
+  cloud:
+    config:
+      fail-fast: true
+      label: master
+      uri: http://${CONFIG_SERVER_HOST}:${CONFIG_SERVER_PORT}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

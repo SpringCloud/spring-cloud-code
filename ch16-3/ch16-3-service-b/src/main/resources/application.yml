@@ -1,0 +1,11 @@
+server:
+  port: 9022
+
+spring:
+  application:
+    name: ch16-3-service-b
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ch18-6-provider
+server:
+  port: 8000

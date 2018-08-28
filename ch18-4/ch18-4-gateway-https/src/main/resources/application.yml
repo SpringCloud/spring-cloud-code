@@ -1,0 +1,34 @@
+server.port: 8080
+
+spring:
+  application:
+      name: sc-gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+           enabled: true
+           lowerCaseServiceId: true
+
+server:
+  ssl:
+    key-alias: spring
+    enabled: true
+    key-password: spring
+    key-store: classpath:selfsigned.jks
+    key-store-type: JKS
+    key-store-provider: SUN
+    key-store-password: spring
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
