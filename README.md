@@ -2,6 +2,11 @@
 
 https://github.com/SpringCloud/spring-cloud-catalog
 
+## 《重新定义Spring Cloud实战》书评
+
+https://github.com/SpringCloud/spring-cloud-code/issues/1
+
+
 ## 基于Spring Cloud的Finchley.RELEASE版:
 http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html
 
