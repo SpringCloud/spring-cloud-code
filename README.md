@@ -2,7 +2,7 @@
 
 https://github.com/SpringCloud/spring-cloud-catalog
 
-## 《重新定义Spring Cloud实战》书评
+## 《重新定义Spring Cloud实战》书评-收集ing
 
 https://github.com/SpringCloud/spring-cloud-code/issues/1
 
