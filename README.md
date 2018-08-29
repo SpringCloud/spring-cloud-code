@@ -1,3 +1,7 @@
+## 《重新定义Spring Cloud实战》实体书目录
+
+https://github.com/SpringCloud/spring-cloud-catalog
+
 ## 基于Spring Cloud的Finchley.RELEASE版:
 http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html
 
