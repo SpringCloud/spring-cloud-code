@@ -13,7 +13,7 @@
 
     <parent>
         <groupId>cn.springcloud.book</groupId>
-        <artifactId>ch24-3-3-saga-servicecomb</artifactId>
+        <artifactId>ch24-saga-servicecomb</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
