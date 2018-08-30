@@ -10,8 +10,8 @@ https://github.com/SpringCloud/spring-cloud-code/issues/1
 ## 基于Spring Cloud的Finchley.RELEASE版:
 http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html
 
-由于聚合工程很多，Maven内存如果不足，请设置如下，欢迎**Star**。
-/spring-cloud-code/pom.xml
+由于聚合工程很多，Maven内存如果不足，在/spring-cloud-code/pom.xml设置如下，欢迎**Star**。
+
 ```
 <build>
         <plugins>
