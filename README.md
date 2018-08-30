@@ -10,7 +10,30 @@ https://github.com/SpringCloud/spring-cloud-code/issues/1
 ## 基于Spring Cloud的Finchley.RELEASE版:
 http://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html
 
-由于聚合工程很多，Maven内存如果不足，请设置，欢迎**Star**。
+由于聚合工程很多，Maven内存如果不足，请设置如下，欢迎**Star**。
+/spring-cloud-code/pom.xml
+```
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                  <fork>true</fork>
+                  <meminitial>512m</meminitial>
+                  <!-- 如果不够读者可以加大 -->
+                  <maxmem>4048m</maxmem>
+                </configuration>
+            </plugin>
+        </plugins>
+ </build>
+```
+
 
 ## 第25章 领域驱动框架
 
