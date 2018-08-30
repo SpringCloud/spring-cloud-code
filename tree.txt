@@ -1,3 +1,4 @@
+.
 ├── LICENSE
 ├── README.md
 ├── ch10-1
@@ -223,8 +224,7 @@
 ├── ch19-1
 │   ├── ch19-1.iml
 │   ├── pom.xml
-│   ├── src
-│   └── target
+│   └── src
 ├── ch19-2
 │   ├── ch19-2.iml
 │   ├── grpc-lib-1
@@ -351,18 +351,6 @@
 │   ├── mvnw.cmd
 │   └── pom.xml
 ├── ch3-5
-│   ├── ch3-5-1-config-server
-│   ├── ch3-5-1-eureka-client
-│   ├── ch3-5-1-eureka-server
-│   ├── ch3-5-2-eureka-client
-│   ├── ch3-5-2-eureka-server
-│   ├── ch3-5-2-zuul-gateway
-│   ├── ch3-5-3-eureka-client
-│   ├── ch3-5-3-eureka-server
-│   ├── ch3-5-4-eureka-client
-│   ├── ch3-5-4-eureka-server
-│   ├── ch3-5-5-eureka-client
-│   ├── ch3-5-5-eureka-server
 │   ├── ch3-5-eureka-client
 │   ├── ch3-5-eureka-server
 │   ├── ch3-5.iml
@@ -513,8 +501,7 @@
 │   ├── ch8-7-zuul-server
 │   ├── ch8-7.iml
 │   └── pom.xml
-├── code.iml
 ├── pom.xml
 └── tree.txt
 
-324 directories, 194 files
+311 directories, 193 files
