@@ -135,7 +135,7 @@
                   <fork>true</fork>
                   <meminitial>512m</meminitial>
                   <!-- 如果不够读者可以加大 -->
-                  <maxmem>1048m</maxmem>
+                  <maxmem>4096m</maxmem>
                 </configuration>
             </plugin>
         </plugins>
