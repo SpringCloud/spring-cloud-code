@@ -12,7 +12,6 @@
 	<version>0.0.1-SNAPSHOT</version>
     <name>ch10-1</name>
     <url>http://springcloud.cn</url>
-    <author>zhudeming620@aliyun.com</author>
 
     <modules>
         <module>ch10-1-eureka-server</module>
