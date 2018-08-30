@@ -127,6 +127,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                  <fork>true</fork>
+                  <meminitial>512m</meminitial>
+                  <!-- 如果不够读者可以加大 -->
+                  <maxmem>1048m</maxmem>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
