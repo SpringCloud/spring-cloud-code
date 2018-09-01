@@ -1,6 +1,6 @@
 ## 1.《重新定义Spring Cloud实战》
 
-   Spring Cloud中国社区(http://springcloud.cn)是国内基于Spring Cloud微服务体系创建的非盈利技术社区。自2016年10月份创建以来，在北京，上海，深圳，成都等地举办了多次技术沙龙，提供技术交流平台,帮助数万开发者快速学习Spring Cloud并用于生产。为更好的推动Spring Cloud在中国的发展，让更多的开发者受益。社区针对Spring Cloud在国内的使用情况，结合国内上百企业使用Spring Cloud落地微服务架构遇到的问题给出实战解决方案，特推出此书。关注Spring Cloud中国社区微信公众号，一起交流学习。
+   Spring Cloud中国社区([http://springcloud.cn](http://springcloud.cn)) 是国内基于Spring Cloud微服务体系创建的非盈利技术社区。自2016年10月份创建以来，在北京，上海，深圳，成都等地举办了多次技术沙龙，提供技术交流平台,帮助数万开发者快速学习Spring Cloud并用于生产。为更好的推动Spring Cloud在中国的发展，让更多的开发者受益。社区针对Spring Cloud在国内的使用情况，结合国内上百企业使用Spring Cloud落地微服务架构遇到的问题给出实战解决方案，特推出此书。关注Spring Cloud中国社区微信公众号，一起交流学习。
     ![](/doc/image/sqgzh.png)
     
    本书基于基于Spring Cloud的`Finchley.RELEASE`版编写，`由7位作者著，我们7位作者并不是Spring Cloud微服务落地的架构专家，我们只是Spring Cloud微服务架构的实践者，`把我们自己的实践经验分享给大家，帮助大家解决学习和工作上遇到的问题。三人行，必有我师焉，由于我们学识有限，难免会有不足之处，还请读者多多包涵，一起交流学习，共同进步。
