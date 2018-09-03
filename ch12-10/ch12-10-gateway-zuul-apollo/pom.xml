@@ -21,21 +21,12 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!--
-            这里使用已经发布的jar， 目的是为了让源代码整体编译不报错。
-            读者要使用和书上一致的， 可以下载源代码本地安装， 打开下面的注释，在注释1.0.0 的即可
-            jar 的变化和发布地址请看：https://github.com/ctripcorp/apollo/releases
-          -->
+
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <!--<dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
             <version>${apollo-client-version}</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <build>
