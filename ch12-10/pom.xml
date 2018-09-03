@@ -16,6 +16,7 @@
         <module>ch12-10-config-client-apollo2</module>
         <module>ch12-10-eureka-server</module>
         <module>ch12-10-gateway-zuul-apollo</module>
+        <module>ch12-10-apollo-build-script</module>
     </modules>
 
     <properties>
