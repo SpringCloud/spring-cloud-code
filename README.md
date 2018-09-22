@@ -5,7 +5,7 @@
    ![](/doc/image/sqgzh.png)
     
    本书基于Spring Cloud的`Finchley.RELEASE`版编写，`由7位作者著，我们7位作者并不是Spring Cloud微服务落地的架构专家，我们只是Spring Cloud微服务架构的实践者，`把我们自己的实践经验分享给大家，帮助大家解决学习和工作上遇到的问题。三人行，必有我师焉，由于我们学识有限，难免会有不足之处，还请读者多多包涵，一起交流学习，共同进步。
-   <img style="width: 340px;" src="/doc/image/fm.png">
+   <img style="width:340px;" src="/doc/image/fm.png">
 
 ### 1.1 实体书目录
 
