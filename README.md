@@ -1,5 +1,7 @@
 《重新定义Spring Cloud实战》
 ================
+* 当当购买:http://product.dangdang.com/25348282.html
+* 京东购买:https://item.jd.com/12447280.html
 
 ## 1. 前言
  
