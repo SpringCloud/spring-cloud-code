@@ -76,7 +76,7 @@ public class TestController {
 	}
 
 	@GetMapping("/test/Hystrix/")
-	public String index(@RequestParam("sleep") boolean isSleep) throws InterruptedException {
+	public String index(@RequestParam("isSleep") boolean isSleep) throws InterruptedException {
 		log.info("issleep is " + isSleep);
 		//isSleep为true开始睡眠，睡眠时间大于Gateway中的fallback设置的时间
 		if (isSleep) {
