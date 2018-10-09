@@ -9,7 +9,7 @@ spring:
     gateway:
       routes:
       - id: prefix_route
-        uri: http://localhost:8701/test/Hystrix?isSleep=true
+        uri: http://localhost:8071/test/Hystrix?isSleep=true
         predicates:
         - Path=/test/Hystrix
         filters:
