@@ -31,8 +31,7 @@ ribbon:
     enabled: false
   okhttp:
     enabled: true
-#重试机制配置
-ribbon:
+  #重试机制配置
   ConnectTimeout: 3000
   ReadTimeout: 60000
   MaxAutoRetries: 1 #对第一次请求的服务的重试次数
