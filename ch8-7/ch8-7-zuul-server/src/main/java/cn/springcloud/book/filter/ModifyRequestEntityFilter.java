@@ -38,36 +38,16 @@ public class ModifyRequestEntityFilter extends ZuulFilter {
 
 	@Override
 	public Object run() throws ZuulException {
-		try {
-			RequestContext context = RequestContext.getCurrentContext();
-			String charset = context.getRequest().getCharacterEncoding();
-			InputStream in = (InputStream) context.get("requestEntity");
-			if (in == null)
-				in = context.getRequest().getInputStream();
-			String body = StreamUtils.copyToString(in, Charset.forName(charset));
-			// 这里是新增的参数
-			body += "&weight=140";
-			byte[] bytes = body.getBytes(charset);
-			context.setRequest(new HttpServletRequestWrapper(context.getRequest()) {
-
-				@Override
-				public ServletInputStream getInputStream() throws IOException {
-					return new ServletInputStreamWrapper(bytes);
-				}
-
-				@Override
-				public int getContentLength() {
-					return bytes.length;
-				}
-
-				@Override
-				public long getContentLengthLong() {
-					return bytes.length;
-				}
-			});
-		} catch (IOException e) {
-			ReflectionUtils.rethrowRuntimeException(e);
-		}
+		RequestContext ctx = RequestContext.getCurrentContext();
+		HttpServletRequest request = ctx.getRequest();
+		request.getParameterMap();
+		Map<String, List<String>> requestQueryParams = ctx.getRequestQueryParams();
+		if (requestQueryParams == null) requestQueryParams = new HashMap<>();
+		//这里添加新增参数的value，注意，只取list的0位
+		ArrayList<String> arrayList = new ArrayList<>();
+		arrayList.add("1wwww");
+		requestQueryParams.put("test", arrayList);
+		ctx.setRequestQueryParams(requestQueryParams);
 		return null;
 	}
 }
