@@ -70,7 +70,8 @@ public class DynamicRouteServiceImpl implements ApplicationEventPublisherAware {
      */
     public String delete(String id) {
         try {
-            this.routeDefinitionWriter.delete(Mono.just(id));
+            this.routeDefinitionWriter.delete(Mono.just(id)).subscribe();
+            this.publisher.publishEvent(new RefreshRoutesEvent(this));
             return "delete success";
         } catch (Exception e) {
             e.printStackTrace();
