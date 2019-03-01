@@ -647,5 +647,8 @@ ch是章节的简称，ch10表示第十章，ch10-1表示第十章的第一个�
 
 7. 朱德明:拥有10年Java开发经验，多年技术架构和解决方案经验，现任灵雀云微服务架构师，在微服务领域有着丰富的落地经验，曾任某创业公司技术负责人。
 
+## Stargazers over time
 
+[![Stargazers over time](https://starcharts.herokuapp.com/SpringCloud/spring-cloud-code.svg)](https://starcharts.herokuapp.com/SpringCloud/spring-cloud-code)
+      
 
