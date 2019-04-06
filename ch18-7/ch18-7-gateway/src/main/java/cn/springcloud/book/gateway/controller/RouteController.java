@@ -50,19 +50,36 @@ public class RouteController {
     }
 
     private RouteDefinition assembleRouteDefinition(GatewayRouteDefinition gwdefinition) {
+
         RouteDefinition definition = new RouteDefinition();
-        List<PredicateDefinition> pdList=new ArrayList<>();
+
+        // ID
         definition.setId(gwdefinition.getId());
-        List<GatewayPredicateDefinition> gatewayPredicateDefinitionList=gwdefinition.getPredicates();
-        for (GatewayPredicateDefinition gpDefinition: gatewayPredicateDefinitionList) {
+
+        // Predicates
+        List<PredicateDefinition> pdList = new ArrayList<>();
+        for (GatewayPredicateDefinition gpDefinition: gwdefinition.getPredicates()) {
             PredicateDefinition predicate = new PredicateDefinition();
             predicate.setArgs(gpDefinition.getArgs());
             predicate.setName(gpDefinition.getName());
             pdList.add(predicate);
         }
         definition.setPredicates(pdList);
-        URI uri = UriComponentsBuilder.fromHttpUrl(gwdefinition.getUri()).build().toUri();
+
+        // Filters
+        List<FilterDefinition> fdList = new ArrayList<>();
+        for (GatewayFilterDefinition gfDefinition: gwdefinition.getFilters()) {
+            FilterDefinition filter = new FilterDefinition();
+            filter.setArgs(gfDefinition.getArgs());
+            filter.setName(gfDefinition.getName());
+            fdList.add(filter);
+        }
+        definition.setFilters(fdList);
+
+        // URI
+        URI uri = UriComponentsBuilder.fromUriString(gwdefinition.getUri()).build().toUri();
         definition.setUri(uri);
+
         return definition;
     }
 
