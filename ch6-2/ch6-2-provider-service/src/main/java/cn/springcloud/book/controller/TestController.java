@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 	@RequestMapping(value = "/getUser",method = RequestMethod.GET)
-	public String getUser(@RequestParam("username") String username){
-		return "This is real user";
+	public String getUser(@RequestParam("username") String username) throws Exception{
+		if(username.equals("spring")) {
+			return "This is real user";
+		}else {
+			throw new Exception();
+		}
 	}
 }
