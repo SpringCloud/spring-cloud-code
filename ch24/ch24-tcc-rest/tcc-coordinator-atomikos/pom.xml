@@ -44,7 +44,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-handler</artifactId>
-            <version>4.1.27.Final</version>
+            <version>4.1.45.Final</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
