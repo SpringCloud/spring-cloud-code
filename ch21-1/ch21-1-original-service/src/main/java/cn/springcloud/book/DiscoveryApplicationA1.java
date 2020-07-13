@@ -1,16 +1,11 @@
 package cn.springcloud.book;
 
+import cn.springcloud.book.extension.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-
-import cn.springcloud.book.extension.MyDiscoveryEnabledAdapter;
-import cn.springcloud.book.extension.MyDiscoveryListener;
-import cn.springcloud.book.extension.MyLoadBalanceListener;
-import cn.springcloud.book.extension.MyRegisterListener;
-import cn.springcloud.book.extension.MySubscriber;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -43,7 +38,7 @@ public class DiscoveryApplicationA1 {
     }
 
     @Bean
-    public MyDiscoveryEnabledAdapter myDiscoveryEnabledAdapter() {
-        return new MyDiscoveryEnabledAdapter();
+    public MyDiscoveryEnabledStrategy myDiscoveryEnabledStrategy() {
+        return new MyDiscoveryEnabledStrategy();
     }
 }

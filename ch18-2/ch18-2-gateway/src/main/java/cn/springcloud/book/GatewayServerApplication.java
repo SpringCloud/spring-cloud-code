@@ -17,8 +17,9 @@ public class GatewayServerApplication {
     public RouteLocator customerRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/test")
-                        .filters(f -> f.filter(new CustomGatewayFilter()))
-                        .uri("http://localhost:8001/customFilter?name=xujin")
+                        .filters(f -> f.filter(new CustomGatewayFilter()).
+                                addRequestParameter("name","xujin"))
+                        .uri("http://localhost:8001/customFilter")
                         .order(0)
                         .id("custom_filter")
                 )

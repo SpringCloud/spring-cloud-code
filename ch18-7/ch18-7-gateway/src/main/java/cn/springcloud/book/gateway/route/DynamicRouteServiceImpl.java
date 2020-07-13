@@ -8,10 +8,8 @@ import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.cloud.gateway.handler.predicate.PredicateDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
-import org.springframework.cloud.gateway.support.NotFoundException;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Mono;
@@ -70,13 +68,13 @@ public class DynamicRouteServiceImpl implements ApplicationEventPublisherAware {
      */
     public String delete(String id) {
         try {
-            this.routeDefinitionWriter.delete(Mono.just(id));
+            this.routeDefinitionWriter.delete(Mono.just(id)).subscribe();
+            this.publisher.publishEvent(new RefreshRoutesEvent(this));
             return "delete success";
         } catch (Exception e) {
             e.printStackTrace();
             return "delete fail";
         }
-
     }
 
     @Override

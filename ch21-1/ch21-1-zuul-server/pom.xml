@@ -9,7 +9,7 @@
 	<artifactId>ch21-1-zuul-server</artifactId>
 
 	<properties>
-		<discovery.plugin.version>4.2.1</discovery.plugin.version>
+		<discovery.plugin.version>4.8.4.1</discovery.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
@@ -30,17 +30,14 @@
         <dependency>
             <groupId>com.nepxion</groupId>
             <artifactId>discovery-plugin-starter-eureka</artifactId>
-            <!-- <artifactId>discovery-plugin-starter-consul</artifactId> -->
-            <!-- <artifactId>discovery-plugin-starter-zookeeper</artifactId> -->
         </dependency>
         <dependency>
             <groupId>com.nepxion</groupId>
-            <!-- <artifactId>discovery-console-extension-nacos</artifactId> -->
-            <artifactId>discovery-plugin-config-center-extension-redis</artifactId>
+            <artifactId>discovery-plugin-config-center-starter-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>com.nepxion</groupId>
-            <artifactId>discovery-plugin-strategy-extension-zuul</artifactId>
+            <artifactId>discovery-plugin-strategy-starter-zuul</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
