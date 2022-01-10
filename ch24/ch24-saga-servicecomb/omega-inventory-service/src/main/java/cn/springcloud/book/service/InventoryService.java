@@ -20,9 +20,9 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class InventoryService {
 
-    private Set<String> executedSet = new ConcurrentHashMap<>().newKeySet();
+    private Set<String> executedSet = ConcurrentHashMap.newKeySet();
 
-    private Set<String> canceledSet = new ConcurrentHashMap<>().newKeySet();
+    private Set<String> canceledSet = ConcurrentHashMap.newKeySet();
 
     @Autowired
     InventoryDao inventoryDao;

@@ -1,16 +1,15 @@
 package cn.springcloud.book.extension;
 
-import java.util.Map;
-
+import com.nepxion.discovery.plugin.strategy.adapter.DiscoveryEnabledStrategy;
+import com.netflix.loadbalancer.Server;
+import com.netflix.zuul.context.RequestContext;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.nepxion.discovery.plugin.strategy.discovery.DiscoveryEnabledAdapter;
-import com.netflix.loadbalancer.Server;
-import com.netflix.zuul.context.RequestContext;
+import java.util.Map;
 
-public class MyDiscoveryEnabledAdapter implements DiscoveryEnabledAdapter {
+public class MyDiscoveryEnabledAdapter implements DiscoveryEnabledStrategy {
     private static final Logger LOG = LoggerFactory.getLogger(MyDiscoveryEnabledAdapter.class);
 
     @Override

@@ -18,9 +18,9 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class OrderService {
 
-    private Set<String> executedSet = new ConcurrentHashMap<>().newKeySet();
+    private Set<String> executedSet = ConcurrentHashMap.newKeySet();
 
-    private Set<String> canceledSet = new ConcurrentHashMap<>().newKeySet();
+    private Set<String> canceledSet = ConcurrentHashMap.newKeySet();
 
     @Autowired
     OrderDao orderDao;
