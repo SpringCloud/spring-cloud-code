@@ -38,7 +38,7 @@
         <protobuf.version>3.5.1</protobuf.version>
         <netty.version>4.1.17.Final</netty.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
 
         <spring-cloud.consul.version>2.0.1.RELEASE</spring-cloud.consul.version>
         <spring-cloud.eureka.version>2.0.1.RELEASE</spring-cloud.eureka.version>
